@@ -1,11 +1,20 @@
-"""Practice with functions"""
+"""Both code functions below return the same thing"""
+
+"""Just written in a different way"""
+"""However they would have different memory diagrams"""
 
 
-# Define a function
-def sum(num1: int, num2: int) -> int:
-    """Returns num1 + num2."""
-    return num1 + num2
+def speak(sound: str, repeat: int) -> str:
+    return sound * repeat
 
 
-# Call the function
-print(sum(num1=1, num2=10))  # <- 1 and 10 are arguments
+print(speak(sound="woof", repeat=3))
+print(speak(sound="meow", repeat=2))
+
+
+def speak(sound: str, repeat: int) -> None:
+    print(sound * repeat)
+
+
+speak(sound="woof", repeat=3)
+speak(sound="meow", repeat=2)
